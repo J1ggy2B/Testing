@@ -7,7 +7,7 @@ public class Program {
 
 	public static void main(String[] args) {
 		
-		Employee Dave = new Manager("Dave Smith", "Manager");
+		Employee Dave = new Manager("Dave Smith", "Manager", "Production");
 		Employee Sarah = new Employee("Sarah MacLean", "HR supervisor");
 		Employee William = new SkilledWorker("William Fraser", "Designer", "Graphics");
 		Employee Frank = new Employee("Frank MacIlveny", "Warehouse supervisor");

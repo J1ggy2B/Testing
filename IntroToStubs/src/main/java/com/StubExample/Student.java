@@ -1,11 +1,12 @@
 package com.StubExample;
 
-public class Student {  // A CLASS STUDENT WITH 3 FIELDS "ID", "name" & "Course"
+public class Student extends StudentAbstraction implements StudentInterface{  // A CLASS STUDENT WITH 3 FIELDS "ID", "name" & "Course"
 	private int ID;
 	private String name; 
     private String course;
-
-public Student (String name, String course) {  // THE CONSTRUCTOR TAKES A VALUE FOR "name" & "course"
+    
+    public Student (int ID, String name, String course) {  // THE CONSTRUCTOR TAKES A VALUE FOR "name" & "course"
+	this.ID = ID;
 	this.name = name;
 	this.course=course;
 	}
@@ -29,6 +30,7 @@ public Student (String name, String course) {  // THE CONSTRUCTOR TAKES A VALUE 
 		this.course = course;
 	}
 	// Get the instance of a Student object by it's "ID" and print the "name" & "course" else print apology
+	@Override
 	public void getStudentDetails(int ID) {
 		if(this.getID()==ID) {
 		System.out.println(name + course); 
@@ -37,4 +39,5 @@ public Student (String name, String course) {  // THE CONSTRUCTOR TAKES A VALUE 
 			System.out.println("Apologies no student found");
 		}
 	}
+
 }

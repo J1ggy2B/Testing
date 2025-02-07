@@ -3,7 +3,7 @@ package com.J1ggy;
 
 
 //TWO SEPERATE SMALL EXAMPLES 
-// 1 - Passing a variable length lost of parameters
+// 1 - Passing a variable length list of parameters
 // 2 - Overriding the toString() method inherited from object
 public class varLenParamList {
 
@@ -15,6 +15,8 @@ public class varLenParamList {
 		//--Just to show you can override the "Object" default toString()method - can give clearer logs
         StudentTest ST = new StudentTest(14,"George");
          System.out.println(ST.toString());
+         
+
 	}//End Main
 	
 	
@@ -25,4 +27,5 @@ public class varLenParamList {
 			System.out.print(name + " \n ");
 		}//End for
 	}//End of aLotOfParams()
+
 }//End Class

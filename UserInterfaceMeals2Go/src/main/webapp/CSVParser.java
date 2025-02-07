@@ -10,7 +10,7 @@ public class CSVParser {
 	ArrayList<CRItem>items = new ArrayList<>();
 	
     public ArrayList<CRItem>getMenu(){
-        String csvFile = "/home/watso/eclipse_Workspace_JEEE/Parsers/src/com/J1ggy/CafeRomaMenu.csv";
+        String csvFile = "C:\\Repositories\\J1ggyB\\BaseCamp\\UserInterfaceMeals2Go\\src\\CafeRomaMenu.csv";
         String line;
         String cvsSplitBy = ",";
 

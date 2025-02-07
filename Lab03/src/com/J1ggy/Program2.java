@@ -3,23 +3,24 @@ package com.J1ggy;
 import java.util.Scanner;            //note: fields and methods are jointly known as members of the class
 
 public class Program2 {  //Start of Class declaration - pay close attention to method parameters & returns
-	//note: No fields
+	static Scanner s;
 	public static void main(String[] args) {  //Start of main
 		// Lab 3 Part 2
 		String order = theLunchQueue(); //Calls theLunchQueue()method which prompts the user and returns a String
-		System.out.println(order); //Prints the String result returned from theLunchQueue()to the Console  
+		System.out.println(order); //Prints the String result returned from theLunchQueue()to the Console 
+		s.close();
 	} // end of main
 	//--------------------------------------------------------------------------------------------
 	//The methods getInt() and getString() take a String param (the prompt), use a Scanner to collect user
 	public static int getInt(String prompt) {          //input and return either an int or a String.
 		System.out.println(prompt);                    //These methods are used in theLunchQueue() method
-		Scanner s = new Scanner(System.in);            //To prompt the user or choices and build a String
+		s = new Scanner(System.in);            //To prompt the user or choices and build a String
 			return s.nextInt();                        //return that will represent their choices
 	}
 
 	public static String getString(String prompt ) {
 		System.out.println(prompt);
-		Scanner s = new Scanner(System.in);
+		s = new Scanner(System.in);
 			return s.nextLine();
 	}
 	//--------------------------------------------------------------------------------------------

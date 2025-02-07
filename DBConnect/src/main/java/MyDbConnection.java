@@ -1,15 +1,16 @@
-import java.time.LocalDate;
+
 import java.sql.*;
 public class MyDbConnection {
 
 	public static void main(String[] args) {
 		try{
-		Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/Students_db","watso","gww22");
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_db","watso","Pa55word");
 		System.out.println("Connection Good!");
 		
 		PreparedStatement pstat = c.prepareStatement("insert into students values(?,?,?)");
 		
-		pstat.setNString(1, "3");
+		pstat.setNString(1, "2");
 		pstat.setNString(2, "Jimmy");
 		pstat.setNString(3, "Gordon");
 
@@ -21,4 +22,3 @@ public class MyDbConnection {
 	}
 
 }
-//

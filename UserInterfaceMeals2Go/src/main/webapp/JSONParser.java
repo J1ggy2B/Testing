@@ -25,7 +25,7 @@ public class JSONParser {
         // Create the Gson instance from the GsonBuilder
         Gson gson = gsonBuilder.create();
         
-        String fileName = "/home/watso/eclipse_Workspace_JEEE/UserInterfaceMeals2Go/src/SummerGardenMenuItems.json";
+        String fileName = "C:\\Repositories\\J1ggyB\\BaseCamp\\UserInterfaceMeals2Go\\src\\SummerGardenMenuItems.json";
         
         try {
             String content = new String(Files.readAllBytes(Paths.get(fileName)));

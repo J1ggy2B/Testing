@@ -3,22 +3,24 @@ package com.qa.main.jslabs.lab03;
 import java.util.Scanner;
 
 public class Program2 {
-
+    static Scanner s;
 	public static void main(String[] args) {
 		// Lab 3 Part 2
+		s = new Scanner(System.in);
 		String order = theLunchQueue();
 		System.out.println(order);
+		s.close();
 	}
 	
 	public static int getInt(String prompt) {
 		System.out.println(prompt);
-		Scanner s = new Scanner(System.in);
+		s = new Scanner(System.in);
 			return s.nextInt();
 	}
 
 	public static String getString(String prompt ) {
 		System.out.println(prompt);
-		Scanner s = new Scanner(System.in);
+		s = new Scanner(System.in);
 			return s.nextLine();
 	}
 	

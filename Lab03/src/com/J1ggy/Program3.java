@@ -3,7 +3,6 @@ package com.J1ggy;
 import java.util.InputMismatchException;
 
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Program3 {

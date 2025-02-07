@@ -1,8 +1,10 @@
 package com.J1ggy;
 
+
 public class Program4 {//Start of Class Definition
 
 	public static void main(String[] args) { //Start of main
+		
 		// Lab 3 Part 4
 		System.out.println("This exercise uses classes\n");//Just printing out a title
 		Lab3Exercise myLab3 = new Lab3Exercise();//Creates a new "instance" of the Lab3Exercise class "myLab3"
@@ -11,6 +13,7 @@ public class Program4 {//Start of Class Definition
 		myLab3.convertInputToStonesPounds(pounds);
 		int kilograms = myLab3.getInt("\nEnter your weight in kilograms: ");
 		myLab3.convertKgsToStonesPounds(kilograms);
+		Lab3Exercise.s.close();
 	}//End of main
 
 }//End of Class Definition

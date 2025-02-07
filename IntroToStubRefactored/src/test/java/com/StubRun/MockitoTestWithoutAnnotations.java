@@ -10,7 +10,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-public class MockitoTest {			         //Create a class to Test our Business implementation
+public class MockitoTestWithoutAnnotations {			         //Create a class to Test our Business implementation
 
 	private ServiceInterface service;        //Create fields: "ServiceInterface service" is the customers interface 
 	private ServiceBusImpl serviceBusImpl;                // "ServiceBusImpl serviceBusImpl" is our business logic

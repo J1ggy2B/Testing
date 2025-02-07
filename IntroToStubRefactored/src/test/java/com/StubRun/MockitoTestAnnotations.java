@@ -17,7 +17,7 @@ public class MockitoTestAnnotations {			         //Create a class to Test our Bu
 	private ServiceBusImpl serviceBusImpl;                // "ServiceBusImpl serviceBusImpl" is our business logic
     private List <Student> allStudents;                   // "List allStudents" will hold our Student data
     //So the idea is we mock the "ServiceInterface" "INTERFACE" as a mock INSTANCE of a "ServiceInterface" CLASS
-    //we can't normally instances of an interface...and we don't know how the customer will implement
+    //we can't normally create instances of an interface...and we don't know how this will be implemented
     //we do know the ServiceInterface will have a method List<Student> retrieveStudents()
     //This is the behaviour we need to supply with our mock
 	@BeforeEach                      

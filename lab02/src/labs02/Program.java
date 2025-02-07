@@ -13,6 +13,8 @@ public class Program {
 		String telNo = "7844466621"; // declare and initialise
 		double salary = 60000.00; // declare and initialise a double (real number ie: has a decimal point)
 		boolean holdCurrDrvLic = true; // declare and initialise a boolean true/false
+		
+		//Print out my details:
 		System.out.println("My details are: " + "\n----------------\n" + name + "\nage: " + age 
 				+ "\n" + houseNumber + " " + addressLine1 + "\n" 
 				+ addressLine2 + "\n" + postCode + "\n" + company 
@@ -21,6 +23,7 @@ public class Program {
 		// Notice the use of + for concatenation (joining Strings)and \n to create a new line within the String
 		// What is different about String to the other data types?
 		//Remember "out" is an instance of the class PrintStream that is a property of the System class
+		
 		//--------------Maths---------------------------------//
 		int number = 5;
 		System.out.println("Initial Value: " + number);
@@ -84,8 +87,7 @@ public class Program {
 		
 		// Task 6 decrement by 1 the value of number
 		System.out.println("\n6. After decrementing once: " + --number);
-		System.out.println("\n6. After decrementing once: " + --number);
-		System.out.println("\n6. After decrementing once: " + number++);
+
 		// The --number decrements before printing (+ is still concatenating Strings)
 		
 		// Task 7 put the remainder when dividing by 3 into 'remainder'
@@ -99,7 +101,7 @@ public class Program {
 		int a = 2, b = 3, c = 5;
 		double d1, d2, d3, d4;
 
-		d1 = a + b * c / 2;  
+		d1 = a + b * c / 2;                                          
 		d2 = (a + b * c) / 2; 
 		d3 = (a + b) * c / 2; 
 		d4 = (a + b) * (c / 2); 
@@ -151,11 +153,11 @@ public class Program {
 		System.out.println("" + 3 + 4); // Answer-->34
 		System.out.println(3 + ' ' + 4); // Answer-->39  The ASCII value 
 		// of the ' ' space character is 32.
-		//char sspace = ' '; 
-		//int ascii = sspace;
+		//char space = ' '; 
+		//int ascii = space;
 		//System.out.println(ascii);
 	}
 	
 }
-;
+
 

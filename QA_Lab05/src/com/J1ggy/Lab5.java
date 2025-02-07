@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Lab5 {
 	Scanner s = new Scanner(System.in);
+	
 	public void grades() {
 		String inputMark = getString("Enter a grade mark between 1..100 (integer): "); //Calls getString() with user prompt assigns to inputMark
 		Integer mark = tryParseInt(inputMark); //Calls tryParseInt with inputMark to check user input is an integer
@@ -65,7 +66,7 @@ public class Lab5 {
 		} else {
 			System.out.println("Eat inside");
 		}
-		if(summer) {                      //if just summer is true
+		if(summer && !evening) {                      //if just summer is true
 			System.out.println("Do outdoors hobby");
 		} else if(evening) {
 			System.out.println("Take a walk");

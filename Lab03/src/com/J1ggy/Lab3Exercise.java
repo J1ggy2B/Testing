@@ -16,6 +16,8 @@ public class Lab3Exercise {   //Start of Definition for a class called "Lab3Exer
 	//(int pounds) is a method argument/parameter - data we pass into the method.
 	//In this case we pass in pounds which are divided by 14 to find the weight value in Stones
 	//note:pounds%14 gives the remainder note: The %d used inside the "String" are placeholders for the values %d a decimal int %s a string
+	static Scanner s = new Scanner(System.in);
+	
 	public void convertInputToStonesPounds(int pounds) {
 		System.out.printf("%d Stones and %d Pounds", pounds/14, pounds%14);
 	}
@@ -29,13 +31,13 @@ public class Lab3Exercise {   //Start of Definition for a class called "Lab3Exer
 // The new Scanner waits for a response then we return that response
 	public int getInt(String prompt) {
 		System.out.println(prompt);
-		Scanner s = new Scanner(System.in);
+		s = new Scanner(System.in);
 		return s.nextInt();
 	}
 //Same thing for a String	
 	public String getString(String prompt ) {
 		System.out.println(prompt);
-		Scanner s = new Scanner(System.in);
+		s = new Scanner(System.in);
 		return s.nextLine();
 	}
 //Here we call the above methods and return a String with the results	
@@ -46,6 +48,6 @@ public class Lab3Exercise {   //Start of Definition for a class called "Lab3Exer
 		
 		return String.format("Hello, your lunch is %s with %d roast potatoes and %d Brussel sprouts."
 					,mainCourse, qtyRoastPotatoes, qtyBrusselSprouts);
-	}
+		}
 //note: With getString() and getInt() we have single responsibility and are working towards our solution.
 }

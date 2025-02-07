@@ -28,7 +28,7 @@ public class Lab4 {
 		String inputMoney = getString("How much money do you have (pennies)? ");
 		Integer money = tryParseInt(inputMoney);
 		if (money == null || money <= 0) {
-			System.out.println("The amount of money has to be great than zero");
+			System.out.println("The amount of money has to be greater than zero");
 			return;
 		}
 		int numBag = money / sweetPrice;

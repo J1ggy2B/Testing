@@ -1,5 +1,7 @@
-package introToMockito;
 
+//EXAMPLE SHOWS HOW MOCKITO CAN MANIPULATE THE DATA TO PASS THE TEST
+package introToMockito;      // SHOWS THAT MOCKITO CAN BE USED TO MANIPULATE THE TEST ie: exists returns false instead of true *****NOTE*******
+                             //  Even though we are trying to register "user" Mockito is set to register expected *****NOTE*******
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -18,7 +20,7 @@ class UserControllerTest {
 	private UserController userController;  //creates an instance of the class and injects the mocks that are created with the @Mock annotations into this instance.
 
 	@Test
-	void registerValidDetailsTest() {
+	void registerValidDetailsTest() {   //Note: Default lifecycle of Mock is method
 		// Arrange
 		User user = new User(0, "Bobby", "Codes123");  //Create an instance of a User called "user"
 		User expected = new User(1, user.getUsername(), user.getPassword()); //Create an instance of User called "expected" with same name & password
@@ -32,7 +34,7 @@ class UserControllerTest {
 		Assertions.assertEquals(expected, actual);   //Assert that the expected and actual results are equal
 	}
 
-	@Test                                            //Note: Default lifecycle is method
+	@Test                                            //Note: Default lifecycle of Mock is method
 	void loginValidDetailsTest() {
 		// Arrange
 		User user = new User(0, "Bobby", "Codes123");  //Create a new User called user

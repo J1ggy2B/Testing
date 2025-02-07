@@ -8,7 +8,7 @@
 package lab01;// The package is a place to group related classes (ie: code structures)
 
 // A class is a template/blueprint used to describe objects (a car, a student etc)
-// An object is a particular "instance" of a class ( that single BMW, Brian Smith etc)
+// An object is a particular "instance" of a class ( myBMW, BrianSmith etc)
 
 
 
@@ -22,7 +22,7 @@ public class Program {  /* Every program needs a class with a main method
 	//public - Means that the method is accessible (or visible) by all other classes
 	
 	//static - Means that it is a class method & there will be no instances of it
-	// An example will be that there will be only one "main()method or the program"
+	// An example will be that there will be only one "main()method for the program"
 	
 	// void - Means that the method main will run but not return a value on completion
 	

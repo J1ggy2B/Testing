@@ -43,7 +43,7 @@ public class UserService {
 		if (!trimmedPassword.matches("[A-Z|a-z|1-9]*[1-9]+[A-Z|a-z|1-9]*")) throw new IllegalArgumentException("Password must contain at least 1 number character");
 		
 		// add user to map
-		users.put(trimmedUsername, trimmedPassword);  // Here we add the the new key/value pair
+		users.put(trimmedUsername, trimmedPassword);  // Here we add the new key/value pair
 		// for a user to our "users" HashMap
 		return trimmedUsername;   // This is the value returned from register()
 	}
@@ -65,12 +65,27 @@ public class UserService {
 		return username; //return from login
 	}
 }
-//****HELP WITH REGEX
-//[]  [Find one character from the options between the brackets]
-//[A-Z|a-z|1-9]  The | bar is "or" 
-//[A-Z|a-z|1-9]*  n* Matches any string that zero or more occurrences of n
-//[A-Z|a-z|1-9]*[A-Z]+   n+ Matches any string that contains at least one [A-Z] ie: Password must contain at least 1 uppercase character" 
-//[A-Z|a-z|1-9]*[A-Z]+[A-Z|a-z|1-9]*   Last bit [A-Z|a-z|1-9]*  The * indicates - that it Matches any string that zero or more occurrences of n
-//Think of the n* as being exclusive [abc]* can have zero or many lowercase alphabetical characters
+/****HELP WITH REGEX
+.matches is a method of String which checks if the entire String matches a regex
+
+[]  [Find one character from the options between the brackets]
+[A-Z|a-z|1-9]  The | bar is "or" 
+[A-Z|a-z|1-9]*  [Pattern]* Matches any string that has zero or more occurrences of the pattern. It is therefore (exclusive) 
+ie: special chars such as '#' are not allowed
+[A-Z|a-z|1-9]*[A-Z]+   [A-Z]+ Matches any string that contains at least one [A-Z] ie: Password must include at least 1 uppercase character" (inclusive)
+[A-Z|a-z|1-9]*[A-Z]+[A-Z|a-z|1-9]*   Last bit [A-Z|a-z|1-9]*  The * indicates - that it Matches any string that zero or more occurrences of n
+
+Think of the * as being exclusive [abc]* can have zero or many lowercase alphabetical characters ie: It excludes anything else
+
+We can also use the Pattern class - see following:
+
+import java.util.regex.Pattern;
+
+public class RegexExample {
+
+        System.out.println(Pattern.matches("somestr*ng", "somestring")); // true
+        System.out.println(Pattern.matches("s*omestr*ng", "somestring")); // false
+}
+*/
 
 

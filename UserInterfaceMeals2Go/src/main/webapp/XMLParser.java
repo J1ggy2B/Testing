@@ -26,7 +26,7 @@ import org.xml.sax.SAXException;
 //CREATE A CLASS TO PARSE THE BURGERS_R_US SUPPLIED XML FILE
 public class XMLParser {
 
-  private static final String Burgers_R_US_FILENAME = "/home/watso/eclipse_Workspace_JEEE/Parsers/src/com/J1ggy/Menu.xml";   //THIS LINE JUST SETS THE XML FILENAME TO A VARIABLE
+  private static final String Burgers_R_US_FILENAME = "C:\\Repositories\\J1ggyB\\BaseCamp\\UserInterfaceMeals2Go\\src\\Menu.xml";   //THIS LINE JUST SETS THE XML FILENAME TO A VARIABLE
   ArrayList<Item> items = new ArrayList<>();                                 //Creates an ArrayList to hold each  menu item
       // Instantiate the Factory
       //DocumentBuilderFactory - Defines a factory API that enables applications to obtain a parser that produces DOM object trees from XML documents.
