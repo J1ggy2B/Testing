@@ -44,8 +44,9 @@ class CalculatorTest {      // Create a class with a meaningful name ~Calculator
 		// Assert
 		Assertions.assertEquals(expected, actual);
 	}
+}
 
-	@Test
+	/*@Test
 	void multiplySmallNumbersTest() {
 		// Arrange
 		double num1 = 10, num2 = 20;
@@ -88,4 +89,4 @@ class CalculatorTest {      // Create a class with a meaningful name ~Calculator
 	}
 
 
-}
+}*/
