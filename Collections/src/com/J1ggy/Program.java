@@ -2,6 +2,7 @@ package com.J1ggy;
 
 import java.util.ArrayDeque;                                                                      // ******* more common
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -22,6 +23,25 @@ public class Program {
 		System.out.println(myList);
 		System.out.println(myList.get(1) + " - Should be Rob?");
 		System.out.println("Why should it be Rob");
+		for(String name : myList) {
+			System.out.println(name);
+		}
+		//***************************************************************************
+		//Get out of jail free
+		String[] people = {"Bob", "Alice", "Charlie", "David", "Eve"};
+         // Wait a minute I need Frank
+		// Convert the array to an ArrayList
+		List<String> nameList = new ArrayList<>();
+		/*nameList.addAll(Arrays.asList(people));*/
+		for(String pers : people) {
+			nameList.add(pers);
+		}
+		// Add the new name
+		nameList.add("Joe");
+
+		// Print the updated list
+		System.out.println(nameList); 
+        //***************************************************************************
 		//--------------------------------------------------------------------------
 		System.out.println("----------------------------------");
 		// Linked List-------------------------------------------------------------SLOW
@@ -73,8 +93,9 @@ public class Program {
 		bikes.add("Triumph");                                                                                              //that exists in both sets
 		System.out.println(bikes);
 		System.out.println(bikes.contains("Triumph"));
-		for(String b : bikes) {
-			System.out.println(b);
+		for(String bike : bikes) {
+			if(bikes.contains("Triumph")){
+			System.out.println(bike);}
 		}
 		//--------------------------------------------------------------------------------------------
 		System.out.println("--------------------------------------------------------");

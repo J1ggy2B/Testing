@@ -30,7 +30,7 @@ public class Account {
 		this.balance += amount;
 	}
 	void close() {
-	System.out.println("account: " + id + " is closed");
+	System.out.println("account: " + id + " is blocked");
 	}
 
 	String getDetails() {

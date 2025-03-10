@@ -7,6 +7,10 @@ import java.util.Timer;
 import javax.swing.*;
 
 public class Game extends Canvas { //Canvas is a subclass of Java Component interface
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	//A component is an object having a graphical representation that can be displayed on the screen
 	// create an array of 3 balls 
 	// call this array balls

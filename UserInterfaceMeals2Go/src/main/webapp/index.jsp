@@ -63,6 +63,7 @@ Enter Password: <input type = "password" name = "password"/>
     // Store the updated hit counter value back in the application scope
     application.setAttribute("hitCounter", hitsCount);
 %>
+<h2>This is the target for my Web Scraper</h2>
 <p>Total number of visits: <%= hitsCount %></p>
 </center>
 </body>

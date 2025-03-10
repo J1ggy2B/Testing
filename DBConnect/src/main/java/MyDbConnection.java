@@ -5,7 +5,7 @@ public class MyDbConnection {
 	public static void main(String[] args) {
 		try{
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_db","watso","Pa55word");
+		Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_db","root","Pa55word");
 		System.out.println("Connection Good!");
 		
 		PreparedStatement pstat = c.prepareStatement("insert into students values(?,?,?)");

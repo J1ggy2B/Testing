@@ -3,6 +3,7 @@ package com.qa.main.jslabs.lab08;
 public class Program {
 
 	public static void main(String[] args) {
+		Account.setBank("NatWest");
 		// Lab 8 part 1
 		Account account1 = new Account(1, "Jas", 0); //Creates Account ID 1 for Jas with 0 balance 
 		System.out.println("Account: " + account1.getId()); // print Account 1
@@ -10,6 +11,7 @@ public class Program {
 		account1.Deposit(100); //Deposit
 		account1.Withdraw(50); //Withdraw
 		account1.getDetails();  //check Balance
+		System.out.println("\n");
 		
 		// Lab 8 part 2
 		Account myAccount = new Account(2, "John", 100); //rinse and repeat - This time add some interest
@@ -17,11 +19,14 @@ public class Program {
 		System.out.println();
 		myAccount.addInterest();
 		myAccount.getDetails();
+		System.out.println("\n");
 		
 		// Refers to the same account. Memory address value is passed in - creates a second reference to the same object on the heap (reference is on stack)
 		Account partnerAccount = myAccount;
 		partnerAccount.addInterest();
 		partnerAccount.getDetails();
+		//myAccount.getDetails();
+		System.out.println("\n");
 		
 		//Memory address value is passed in
 		Account myAccount2 = new Account(3, "Luis", 100); //new creates a new instance of the class on the heap and returns the address
@@ -29,11 +34,13 @@ public class Program {
 		System.out.println();
 		processAccount(myAccount2);
 		myAccount2.getDetails();
-
+		System.out.println("\n");
+		
 		//The value (100) is passed in ie: value placed on the stack
 		int k=100;
-		incInt(k); //k is on the stack so is passed by value
-		System.out.println("incInt(k): " + k);
+		incInt(k)
+		; //k is on the stack so is passed by value
+		System.out.println("incInt(k) no change in value for k: " + k);
 		System.out.println();
 	}
 
@@ -46,4 +53,7 @@ public class Program {
 		System.out.println("does not affect variable k" +x);
 		}
 
+
 }
+
+

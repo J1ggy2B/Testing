@@ -5,6 +5,7 @@ public class Account {//Class from which we can create instances
 	private int id;
 	private String owner;
 	private double balance;
+	private static String bank = "HBOS";  // x is static so belongs to the class
 	//Constructor----------------------------------------------------------------------
 	public Account(int id, String owner, double balance) { //Creates  an instance of Account from parameters id, owner, balance
 		this.id = id;                                      //sets id            
@@ -49,8 +50,15 @@ public class Account {//Class from which we can create instances
 		System.out.println("Account ID: "+getId());
 		System.out.println("Owner: "+getOwner());
 		System.out.println("Balance: "+getBalance());
+		System.out.println("Bank: " + getBank());
 	}
 	
+	public static String getBank() {
+		return bank;
+	}
+	public static void setBank(String bank) {
+		Account.bank = bank;
+	}
 	public void addInterest() {  // Adds 2.5% interest to balance
 		double interestRate = 0.025; // 2.5%
 		balance = balance + (balance * interestRate);

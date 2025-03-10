@@ -22,13 +22,15 @@ if(attribValue != null){%>
 </ul>
 </nav>
 <main>
+
 <form method = "post" action = "StudentLoginServletPath">
 <label for="studentID">Student ID:</label>
-<input type="text" id="studentID" name="studentID"> 
+<input type="text" id="studentID" name="studentID"><br><br> 
 <label for="pin">PIN number:</label>
-<input type="password" id="pin" name="pin"> <!--Hides the PIN  -->
+<input type="password" id="pin" name="pin"> <br><br><!--Hides the PIN  -->
 <input type="Submit" value="Submit" />
 </form>
+
 </main>
 </body>
 </html>

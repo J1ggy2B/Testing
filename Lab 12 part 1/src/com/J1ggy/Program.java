@@ -10,9 +10,11 @@ public class Program {
 		String[]courses = readCSV("Courses.txt"); //Declare String Array to hold course titles - call readCSV()
 		for(int i=0;i<courses.length;i++) {System.out.println(courses[i]);}//Prints out the Course Titles
 		System.out.println("\n");
+		
 		String[]trainers = readCSV("Trainers.txt"); //Declare String Array to hold trainer names - call readCSV()
 		for(int i=0;i<trainers.length;i++) {System.out.println(trainers[i]);}//Prints out the trainer names
 		System.out.println("\n");
+		//**********************************************************************
 		writeCSV(courses);
 		writeCSV(trainers);
 		}catch(Exception e) {System.out.println("Error" + e);}
@@ -48,7 +50,7 @@ public class Program {
 	//-----------------------------------------------------------------------------------------------
 	private static void writeCSV(String[] arrayToPrint)throws IOException{ // pass in String array to be printed
 	 try {
-	      File file = new File("TrainersAndCourses.txt");//File could exist or not
+	      File file = new File("TrainersAndCourses.csv");//File could exist or not
 	      if (file.createNewFile()) {  
 	          System.out.println("File created: " + file.getName()); //Let user no File created 
 	        } else {  
@@ -57,7 +59,7 @@ public class Program {
 	      BufferedWriter bw = new BufferedWriter(new FileWriter(file,true));//Create BufferedWriter(FileWriter)
 	      //NOTE: The "true" in "new FileWriter(file, true)" facilitates appending to existing file ie: not writing
 	      for(int i=0;i<arrayToPrint.length;i++) {//Loop through the elements to print
-	      bw.write("\n"+arrayToPrint[i]+"\n");//Print each element
+	      bw.write("\n"+arrayToPrint[i]+",");//Print each element
 	      }
 	      bw.close();//Close the BufferedWriter
 	      System.out.println("Successfully wrote to the file.");//update the user

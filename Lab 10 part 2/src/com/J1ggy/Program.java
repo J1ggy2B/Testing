@@ -9,6 +9,8 @@ System.out.println("Should be an \"n\" at the 3rd position - and we found an: " 
 System.out.println("Should be an \"n\" at the 3rd position - and we found an: " + name.substring(2,3) + " Again!!!");//start/end index
 System.out.println("I'd rather have found a " + name.substring(0,3) + "g or a simple " + name.substring(8,14)+"eegong...");
 System.out.println("As it is all just jigglyfrong my friend. It's Jabba all gone wrong!!!");
+System.out.println("\n");
+
 System.out.println(name.toUpperCase());
 System.out.println(name.toLowerCase());
 System.out.println(name);
